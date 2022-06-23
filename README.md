@@ -3,6 +3,8 @@
 
 A compilation of guides and examples of design patterns in different languages.
 
+Designed by engineers for engineers.
+
 ## Supported Languages
 
 - Golang
