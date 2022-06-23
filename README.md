@@ -2,7 +2,7 @@
 
 A compilation of guides and examples of design patterns in different languages.
 
-Designed by engineers for engineers.
+Created by an engineer that wanted level up their code quality; made for engineers.
 
 ## Supported Languages
 
@@ -16,11 +16,11 @@ A trivial type of solution for common problems. Like blueprints or standards cre
 
 #### What are the different categories of design patterns?
 
-- Creational
+- [Creational](/creational-patterns)
   - They offer methods for creating objects that boost code reuse and flexibility.
-- Structural
+- [Structural](/structural-patterns)
   - They offer ways to put create big generalized structures while making them adaptable and effective.
-- Behavioural
+- [Behavioural](/behavioural-patterns)
   - They offer a sense of communication and responsibility distribution amongst objects and structures.
 
 #### Why should I learn them?
