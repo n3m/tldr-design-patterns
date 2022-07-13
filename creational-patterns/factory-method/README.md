@@ -6,14 +6,13 @@
 
 ## Applications
 
-- Use the singleton pattern when you need to ensure that only one instance of a class is created.
-- Use the singleton pattern when you need stricter control over global varialbes
+- Use the factory method when you don't know beforehand all the types or implementations of a category in your code.
+- Use the Factory Method when you want to extend the usability of a single module, before it is developed.
 
 ## Examples
 
-[\[Golang\] DB Instance Example](golang/application.go)
+[\[Golang\] Transport Example](golang/application.go)
 
 ## References
 
-- [Singleton](https://www.refactoring.guru/design-patterns/singleton)
-- [Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)
+- [Factory Method](https://www.refactoring.guru/design-patterns/factory-method)
