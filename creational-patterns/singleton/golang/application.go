@@ -10,6 +10,7 @@ import (
  the creation method of the DB Provider twice, and to successfully apply the pattern,
  we're required to resolve the same instance of the DB Provider.
 */
+
 /*
  SOLUTION:
  Go to file > db/main.go for further explanation
