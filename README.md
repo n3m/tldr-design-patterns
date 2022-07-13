@@ -16,11 +16,11 @@ A trivial type of solution for common problems. Like blueprints or standards cre
 
 #### What are the different categories of design patterns?
 
-- [Creational](/creational-patterns)
+- [Creational](/creational-patterns/README.md)
   - They offer methods for creating objects that boost code reuse and flexibility.
-- [Structural](/structural-patterns)
+- [Structural](/structural-patterns/README.md)
   - They offer ways to put create big generalized structures while making them adaptable and effective.
-- [Behavioural](/behavioural-patterns)
+- [Behavioural](/behavioural-patterns/README.md)
   - They offer a sense of communication and responsibility distribution amongst objects and structures.
 
 #### Why should I learn them?
