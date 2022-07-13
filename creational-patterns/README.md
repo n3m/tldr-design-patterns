@@ -9,3 +9,5 @@
 ## Types
 
 [Singleton](/creational-patterns/singleton/README.md)
+[Factory Method](/creational-patterns/factory-method/README.md)
+[Abstract Factory](/creational-patterns/abstract-factory/README.md)
