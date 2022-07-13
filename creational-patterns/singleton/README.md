@@ -7,7 +7,7 @@
 ## Applications
 
 - Use the singleton pattern when you need to ensure that only one instance of a class is created.
-- Use the singleton pattern when you need stricter control over global varialbes
+- Use the singleton pattern when you need stricter control over global variables
 
 ## Examples
 
