@@ -1,28 +1,55 @@
-package main
+package factory
 
-import (
-	"golang/logistics"
-)
-
-/*
-	CONTEXT:
- In a Factory Method pattern, the whole point is to be able to generate instances with different
- properties that are property of the specific type, but also the ones that are from the parent.
-
- In our case, we're attepting to generate a new transport, and specifically we want a bus, so at
- the end, our variable type will be a Bus of some sorts
-*/
-
-/*
- SOLUTION:
- Go to file > logistics/main.go for further explanation
-*/
-
-func main() {
-
-	// We're creating a new transport, and we're passing the type of transport we want to generate
-	someTransport := logistics.CreateNewTransport("bus")
-
-	/* bla bla bla */
-
+// Product interface
+type Product interface {
+	Operation()
 }
+
+// Concrete Products
+type ConcreteProductA struct{}
+
+func (p *ConcreteProductA) Operation() {
+	fmt.Println("ConcreteProductA operation")
+}
+
+type ConcreteProductB struct{}
+
+func (p *ConcreteProductB) Operation() {
+	fmt.Println("ConcreteProductB operation")
+}
+
+// Creator interface
+type Creator interface {
+	FactoryMethod() Product
+	Operation()
+}
+
+// Concrete Creators
+type ConcreteCreatorA struct{}
+
+func (c *ConcreteCreatorA) FactoryMethod() Product {
+	return &ConcreteProductA{}
+}
+
+func (c *ConcreteCreatorA) Operation() {
+	product := c.FactoryMethod()
+	product.Operation()
+}
+
+type ConcreteCreatorB struct{}
+
+func (c *ConcreteCreatorB) FactoryMethod() Product {
+	return &ConcreteProductB{}
+}
+
+func (c *ConcreteCreatorB) Operation() {
+	product := c.FactoryMethod()
+	product.Operation()
+}
+
+// Usage
+creatorA := &ConcreteCreatorA{}
+creatorA.Operation() // Output: "ConcreteProductA operation"
+
+creatorB := &ConcreteCreatorB{}
+creatorB.Operation() // Output: "ConcreteProductB operation"
