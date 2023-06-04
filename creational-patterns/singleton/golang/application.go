@@ -1,31 +1,19 @@
-package main
+package singleton
 
-import (
-	"golang/db"
-)
+// the singleton struct is unexported (lowercase), making it accessible only within the package. This helps enforce the single instance rule.
+type singleton struct{}
 
-/*
-	CONTEXT:
- So, in this Singleton pattern example, for some unknown reason, we're calling
- the creation method of the DB Provider twice, and to successfully apply the pattern,
- we're required to resolve the same instance of the DB Provider.
-*/
+var instance *singleton
 
-/*
- SOLUTION:
- Go to file > db/main.go for further explanation
-*/
-
-func main() {
-	database, err := db.NewDBInstance()
-	if err != nil {
-		panic(err)
+func GetInstance() *singleton {
+	if instance == nil {
+		instance = &singleton{}
 	}
-
-	/* some unknown logic... */
-
-	database2, err := db.NewDBInstance()
-	if err != nil {
-		panic(err)
-	}
+	return instance
 }
+
+// Usage
+instance1 := singleton.GetInstance()
+instance2 := singleton.GetInstance()
+
+fmt.Println(instance1 == instance2) // Output: true
