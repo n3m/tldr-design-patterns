@@ -2,16 +2,16 @@
 
 ## Description
 
-- A singleton is a design that only lets you instantiate once an object/struct/class etc... while providing global access to such instance.
+- The Singleton pattern is a creational design pattern that ensures that only one instance of a class is created and provides a global point of access to it. It is commonly used when you need to have a single, shared instance of a class throughout your application.
 
 ## Applications
 
-- Use the singleton pattern when you need to ensure that only one instance of a class is created.
-- Use the singleton pattern when you need stricter control over global variables
+- By using the Singleton pattern, you can have a centralized, shared instance of a class that can be accessed from anywhere in your code, providing a convenient way to manage global state or resources.
 
 ## Examples
 
-[\[Golang\] DB Instance Example](golang/application.go)
+[\[Golang\] Example](golang/application.go)
+[\[Typescript\] Example](typescript/index.ts)
 
 ## References
 
